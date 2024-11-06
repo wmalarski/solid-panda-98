@@ -1,5 +1,5 @@
 import { Title } from "@solidjs/meta";
-import { Box } from "@sp98/style-system/jsx";
+import { Box } from "@sp98/styled-system/jsx";
 
 export default function Home() {
 	return (

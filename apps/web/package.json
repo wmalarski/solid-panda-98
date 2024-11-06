@@ -12,7 +12,7 @@
 		"@solidjs/router": "^0.15.1",
 		"@solidjs/start": "^1.0.10",
 		"@sp98/ui": "workspace: *",
-		"@sp98/style-system": "workspace: *",
+		"@sp98/styled-system": "workspace: *",
 		"solid-js": "^1.9.3",
 		"vinxi": "^0.4.3"
 	},
