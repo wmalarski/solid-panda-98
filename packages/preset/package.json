@@ -4,18 +4,16 @@
 	"license": "MIT",
 	"sideEffects": false,
 	"source": "src/index.ts",
-	"main": "dist/index/index.common.js",
-	"module": "dist/index/index.module.js",
-	"types": "dist/index/index.d.ts",
+	"main": "dist/index.common.js",
+	"module": "dist/index.module.js",
+	"types": "dist/index.d.ts",
 	"files": ["dist"],
 	"exports": {
-		".": {
-			"import": "./dist/index/index.module.js",
-			"browser": "./dist/index/index.module.js",
-			"require": "./dist/index/index.common.js",
-			"node": "./dist/index/index.common.js",
-			"types": "./src/index.ts"
-		}
+		"import": "./dist/index.module.js",
+		"browser": "./dist/index.module.js",
+		"require": "./dist/index.common.js",
+		"node": "./dist/index.common.js",
+		"types": "./src/index.ts"
 	},
 	"scripts": {
 		"build": "rollup --config rollup.config.mjs",
@@ -27,20 +25,10 @@
 		"@pandacss/dev": "^0.47.1",
 		"@pandacss/preset-panda": "^0.47.1",
 		"@pandacss/types": "^0.47.1",
-		"@solidjs/testing-library": "0.8.10",
 		"@sp98/typescript-config": "workspace: *",
-		"@testing-library/jest-dom": "^6.6.3",
-		"@testing-library/user-event": "14.5.2",
 		"@rollup/plugin-typescript": "^12.1.1",
-		"@vitest/coverage-v8": "^2.1.4",
-		"jsdom": "^25.0.1",
 		"rollup": "4.24.4",
-		"rollup-plugin-postcss": "4.0.2",
-		"rollup-plugin-visualizer": "5.12.0",
-		"rollup-preset-solid": "2.0.1",
-		"typescript": "^5.6.3",
-		"vite-plugin-solid": "2.10.2",
-		"vitest": "^2.1.4"
+		"typescript": "^5.6.3"
 	},
 	"publishConfig": {
 		"access": "public"
