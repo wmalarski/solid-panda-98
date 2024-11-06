@@ -18,3 +18,6 @@ packages/ui/coverage
 stats.html
 .output
 .vinxi
+## Panda
+styled-system
+styled-system-studio

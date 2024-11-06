@@ -1,0 +1,11 @@
+{
+	"extends": "@sp98/typescript-config/solid-library.json",
+	"include": ["."],
+	"exclude": ["dist", "build", "node_modules"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["src/*"]
+		}
+	}
+}
