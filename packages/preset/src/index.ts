@@ -6,7 +6,7 @@ import { tokens } from "./tokens";
 
 const defineConfig = <T extends Config>(config: T) => config;
 
-export const shadowPandaPreset = defineConfig({
+export const sp98Preset = defineConfig({
 	presets: [pandaPreset],
 	theme: {
 		extend: {
@@ -16,5 +16,3 @@ export const shadowPandaPreset = defineConfig({
 		},
 	},
 });
-
-export default shadowPandaPreset;
