@@ -1,0 +1,14 @@
+{
+	"extends": "@stt-design-system/typescript-config/solid-library.json",
+	"include": ["."],
+	"exclude": ["dist", "build", "node_modules"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"jsx": "preserve",
+		"types": ["@testing-library/jest-dom"],
+		"jsxImportSource": "solid-js",
+		"paths": {
+			"~/*": ["src/*"]
+		}
+	}
+}
