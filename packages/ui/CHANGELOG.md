@@ -1,4 +1,4 @@
-# @stt-design-system/ui
+# @sp98/ui
 
 ## 0.1.2
 

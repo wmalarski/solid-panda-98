@@ -1,5 +1,5 @@
 {
-	"name": "@stt-design-system/web",
+	"name": "@sp98/web",
 	"type": "module",
 	"scripts": {
 		"dev": "vinxi dev",
@@ -9,18 +9,15 @@
 	},
 	"dependencies": {
 		"@solidjs/meta": "^0.29.4",
-		"@solidjs/router": "^0.15.0",
+		"@solidjs/router": "^0.15.1",
 		"@solidjs/start": "^1.0.10",
-		"@stt-design-system/ui": "workspace: *",
-		"solid-js": "^1.9.2",
+		"@sp98/ui": "workspace: *",
+		"solid-js": "^1.9.3",
 		"vinxi": "^0.4.3"
 	},
 	"devDependencies": {
-		"@stt-design-system/tailwind-config": "workspace: *",
-		"@stt-design-system/typescript-config": "workspace: *",
-		"autoprefixer": "10.4.20",
-		"postcss": "^8.4.47",
-		"tailwindcss": "^3.4.14",
+		"@sp98/typescript-config": "workspace: *",
+
 		"rollup-plugin-visualizer": "5.12.0"
 	},
 	"engines": {

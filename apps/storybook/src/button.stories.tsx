@@ -1,4 +1,4 @@
-import { Button } from "@stt-design-system/ui";
+import { Button } from "@sp98/ui";
 import type { ComponentProps } from "solid-js";
 
 const meta = {

@@ -14,7 +14,7 @@
 		"format-and-lint:fix": "biome check . --write",
 		"changeset": "changeset",
 		"version-packages": "changeset version",
-		"release": "turbo run build --filter=@stt-design-system/docs^... && changeset publish"
+		"release": "turbo run build --filter=@sp98/docs^... && changeset publish"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
@@ -22,5 +22,5 @@
 		"turbo": "latest"
 	},
 	"packageManager": "pnpm@9.12.3",
-	"name": "stt-design-system"
+	"name": "sp98"
 }

@@ -1,5 +1,5 @@
 import { Title } from "@solidjs/meta";
-import { Button } from "@stt-design-system/ui";
+import { Button } from "@sp98/ui";
 
 export default function Home() {
 	return (

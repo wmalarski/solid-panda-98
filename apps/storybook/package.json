@@ -1,5 +1,5 @@
 {
-	"name": "@stt-design-system/storybook",
+	"name": "@sp98/storybook",
 	"type": "module",
 	"scripts": {
 		"dev": "storybook dev -p 6006",
@@ -11,22 +11,21 @@
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
-		"@stt-design-system/ui": "workspace: *",
+		"@sp98/ui": "workspace: *",
 		"solid-js": "^1.9.3"
 	},
 	"engines": {
 		"node": ">=18"
 	},
 	"devDependencies": {
-		"@storybook/addon-essentials": "^8.4.0-beta.3",
-		"@storybook/addon-interactions": "^8.4.0-beta.3",
-		"@storybook/addon-links": "^8.4.0-beta.3",
-		"@storybook/blocks": "^8.4.0-beta.3",
-		"@storybook/docs-tools": "^8.4.0-beta.3",
-		"@stt-design-system/tailwind-config": "workspace: *",
-		"@stt-design-system/typescript-config": "workspace: *",
-		"storybook": "^8.4.0-beta.3",
-		"storybook-solidjs": "1.0.0-beta.2",
-		"storybook-solidjs-vite": "1.0.0-beta.2"
+		"@storybook/addon-essentials": "^8.5.0-alpha.3",
+		"@storybook/addon-interactions": "^8.5.0-alpha.3",
+		"@storybook/addon-links": "^8.5.0-alpha.3",
+		"@storybook/blocks": "^8.5.0-alpha.3",
+		"@storybook/docs-tools": "^8.5.0-alpha.3",
+		"@sp98/typescript-config": "workspace: *",
+		"storybook": "^8.5.0-alpha.3",
+		"storybook-solidjs": "^1.0.0-beta.3",
+		"storybook-solidjs-vite": "^1.0.0-beta.3"
 	}
 }

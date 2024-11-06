@@ -1,4 +1,4 @@
-# @stt-design-system/typescript-config
+# @sp98/typescript-config
 
 ## 0.1.0
 

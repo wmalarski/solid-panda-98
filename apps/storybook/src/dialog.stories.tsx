@@ -6,7 +6,7 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from "@stt-design-system/ui";
+} from "@sp98/ui";
 
 const meta = {
 	component: Dialog,

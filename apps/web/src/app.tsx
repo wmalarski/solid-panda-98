@@ -1,7 +1,7 @@
 import { MetaProvider } from "@solidjs/meta";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
-import "@stt-design-system/ui/styles.css";
+import "@sp98/ui/styles.css";
 import { Suspense } from "solid-js";
 import "./app.css";
 import { Head } from "./components/common/head";

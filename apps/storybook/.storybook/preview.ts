@@ -1,4 +1,4 @@
-import "@stt-design-system/ui/styles.css";
+import "@sp98/ui/styles.css";
 
 const preview = {
 	parameters: {
