@@ -20,7 +20,11 @@
 		}
 	},
 	"scripts": {
+		"prepare": "pnpm panda codegen",
+		"ship": "pnpm panda ship -o dist/panda.buildinfo.json",
 		"build": "rollup --config rollup.config.mjs",
+		"postbuild": "pnpm ship",
+		"release": "pnpm panda prepare && pnpm build && pnpm ship && pnpm publish",
 		"dev": "rollup --config rollup.config.mjs --watch",
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage",
@@ -29,8 +33,10 @@
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
 	},
 	"devDependencies": {
+		"@pandacss/dev": "^0.47.1",
 		"@solidjs/testing-library": "0.8.10",
 		"@sp98/typescript-config": "workspace: *",
+		"@sp98/preset": "workspace: *",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/user-event": "14.5.2",
 		"@vitest/coverage-v8": "^2.1.4",
@@ -44,7 +50,7 @@
 		"vitest": "^2.1.4"
 	},
 	"dependencies": {
-		"@corvu/drawer": "^0.2.2",
+		"@sp98/styled-system": "workspace: *",
 		"@kobalte/core": "^0.13.7",
 		"solid-js": "^1.9.3"
 	},

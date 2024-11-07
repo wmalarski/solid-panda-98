@@ -77,7 +77,7 @@ importers:
         version: 1.0.10(@testing-library/jest-dom@6.6.3)(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.9.0)(ioredis@5.4.1)(lightningcss@1.25.1)(terser@5.36.0)(typescript@5.6.3))(vite@5.4.10(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0))
       '@sp98/styled-system':
         specifier: 'workspace: *'
-        version: link:../../packages/styled-system
+        version: link:../../packages/generated
       '@sp98/ui':
         specifier: 'workspace: *'
         version: link:../../packages/ui
@@ -94,6 +94,8 @@ importers:
       rollup-plugin-visualizer:
         specifier: 5.12.0
         version: 5.12.0(rollup@4.24.4)
+
+  packages/generated: {}
 
   packages/preset:
     devDependencies:
@@ -119,38 +121,29 @@ importers:
         specifier: ^5.6.3
         version: 5.6.3
 
-  packages/styled-system:
-    devDependencies:
-      '@pandacss/dev':
-        specifier: ^0.47.1
-        version: 0.47.1(jsdom@25.0.1)(typescript@5.6.3)
-      '@sp98/preset':
-        specifier: 'workspace: *'
-        version: link:../preset
-      '@sp98/typescript-config':
-        specifier: 'workspace: *'
-        version: link:../typescript-config
-      typescript:
-        specifier: ^5.6.3
-        version: 5.6.3
-
   packages/typescript-config: {}
 
   packages/ui:
     dependencies:
-      '@corvu/drawer':
-        specifier: ^0.2.2
-        version: 0.2.2(solid-js@1.9.3)
       '@kobalte/core':
         specifier: ^0.13.7
         version: 0.13.7(solid-js@1.9.3)
+      '@sp98/styled-system':
+        specifier: 'workspace: *'
+        version: link:../generated
       solid-js:
         specifier: ^1.9.3
         version: 1.9.3
     devDependencies:
+      '@pandacss/dev':
+        specifier: ^0.47.1
+        version: 0.47.1(jsdom@25.0.1)(typescript@5.6.3)
       '@solidjs/testing-library':
         specifier: 0.8.10
         version: 0.8.10(@solidjs/router@0.15.1(solid-js@1.9.3))(solid-js@1.9.3)
+      '@sp98/preset':
+        specifier: 'workspace: *'
+        version: link:../preset
       '@sp98/typescript-config':
         specifier: 'workspace: *'
         version: link:../typescript-config
@@ -844,21 +837,6 @@ packages:
   '@cloudflare/kv-asset-handler@0.3.4':
     resolution: {integrity: sha512-YLPHc8yASwjNkmcDMQMY35yiWjoKAKnhUbPRszBRS0YgH+IXtsMp61j+yTcnCE3oO2DgP0U3iejLC8FTtKDC8Q==}
     engines: {node: '>=16.13'}
-
-  '@corvu/dialog@0.2.3':
-    resolution: {integrity: sha512-1p1lG2Pdu7CtDYw0FP+gdU0Db4zsB2ljOP7UxszZIQpvVvnrAYhNPfu/8IpscB38c0hZCodEnv5hR0NaEEA/Ag==}
-    peerDependencies:
-      solid-js: ^1.8
-
-  '@corvu/drawer@0.2.2':
-    resolution: {integrity: sha512-gj0dGnAc5fxoOe1E55uo8LPrHFxR+MaStn3UB8I1ZbtlJeeLDTK40uCc/Ee9xVxYpYNpUDX6ICGr3i23bsZyOA==}
-    peerDependencies:
-      solid-js: ^1.8
-
-  '@corvu/utils@0.3.2':
-    resolution: {integrity: sha512-ZWlyWEE8qV9+CB9OAyo2bTrZGXQN9ZeM+JfYv89zoR+lRACKTDuoOZEdiyL8Uc7U5dUSH1uTqKhTTnaHWb+wZA==}
-    peerDependencies:
-      solid-js: ^1.8
 
   '@corvu/utils@0.4.2':
     resolution: {integrity: sha512-Ox2kYyxy7NoXdKWdHeDEjZxClwzO4SKM8plAaVwmAJPxHMqA0rLOoAsa+hBDwRLpctf+ZRnAd/ykguuJidnaTA==}
@@ -1791,11 +1769,6 @@ packages:
     peerDependencies:
       solid-js: ^1.6.12
 
-  '@solid-primitives/memo@1.3.10':
-    resolution: {integrity: sha512-S4cNjjKINVC4KiY3ovP1oagbTVQI77VvSRMNsInFIi7T4hM/N5InJk5k+W0zD4lt+SUYrWF04BMbZyMy17vfUw==}
-    peerDependencies:
-      solid-js: ^1.6.12
-
   '@solid-primitives/props@3.1.11':
     resolution: {integrity: sha512-jZAKWwvDRHjiydIumDgMj68qviIbowQ1ci7nkEAgzgvanNkhKSQV8iPgR2jMk1uv7S2ZqXYHslVQTgJel/TEyg==}
     peerDependencies:
@@ -1813,11 +1786,6 @@ packages:
 
   '@solid-primitives/rootless@1.4.5':
     resolution: {integrity: sha512-GFJE9GC3ojx0aUKqAUZmQPyU8fOVMtnVNrkdk2yS4kd17WqVSpXpoTmo9CnOwA+PG7FTzdIkogvfLQSLs4lrww==}
-    peerDependencies:
-      solid-js: ^1.6.12
-
-  '@solid-primitives/scheduled@1.4.4':
-    resolution: {integrity: sha512-BTGdFP7t+s7RSak+s1u0eTix4lHP23MrbGkgQTFlt1E+4fmnD/bEx3ZfNW7Grylz3GXgKyXrgDKA7jQ/wuWKgA==}
     peerDependencies:
       solid-js: ^1.6.12
 
@@ -4602,16 +4570,6 @@ packages:
   smob@1.5.0:
     resolution: {integrity: sha512-g6T+p7QO8npa+/hNx9ohv1E5pVCmWrVCUzUXJyLdMmftX6ER0oiWY/w9knEonLpnOp6b6FenKnMfR8gqwWdwig==}
 
-  solid-dismissible@0.1.1:
-    resolution: {integrity: sha512-9kcKBJIMdS+586cA1g63HYWxKh3h89leeNHbPZ1csYjuni+NvPBtNr11l0iEX2AKKEt6FHk6qNhc/gjoYAW1pA==}
-    peerDependencies:
-      solid-js: ^1.8
-
-  solid-focus-trap@0.1.7:
-    resolution: {integrity: sha512-NSJiIkL+WTWGgca+OKQA9rV3bD51lT23iLn1Z+Ap1Qk3rJBxQ8SoEAQ0FvXoQThtyXFKAK1ibcVBBMMEcu6YMw==}
-    peerDependencies:
-      solid-js: ^1.8
-
   solid-js@1.9.3:
     resolution: {integrity: sha512-5ba3taPoZGt9GY3YlsCB24kCg0Lv/rie/HTD4kG6h4daZZz7+yK02xn8Vx8dLYBc9i6Ps5JwAbEiqjmKaLB3Ag==}
 
@@ -4629,11 +4587,6 @@ packages:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
     peerDependencies:
       solid-js: ^1.3
-
-  solid-transition-size@0.1.4:
-    resolution: {integrity: sha512-ocHVnbfy23CgfaH4cEUR/AFg0Y3CEL8Oh3n9Qv8OHFJgPh+zkmERKZQfi/xH5XvxDCizg8VjPrVUhiHB1Gza8g==}
-    peerDependencies:
-      solid-js: ^1.8
 
   solid-use@0.9.0:
     resolution: {integrity: sha512-8TGwB4m3qQ7qKo8Lg0pi/ZyyGVmQIjC4sPyxRCH7VPds0BzSsT734PhP3jhR6zMJxoYHM+uoivjq0XdpzXeOJg==}
@@ -6197,28 +6150,6 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
-  '@corvu/dialog@0.2.3(solid-js@1.9.3)':
-    dependencies:
-      '@corvu/utils': 0.4.2(solid-js@1.9.3)
-      solid-dismissible: 0.1.1(solid-js@1.9.3)
-      solid-focus-trap: 0.1.7(solid-js@1.9.3)
-      solid-js: 1.9.3
-      solid-presence: 0.1.8(solid-js@1.9.3)
-      solid-prevent-scroll: 0.1.10(solid-js@1.9.3)
-
-  '@corvu/drawer@0.2.2(solid-js@1.9.3)':
-    dependencies:
-      '@corvu/dialog': 0.2.3(solid-js@1.9.3)
-      '@corvu/utils': 0.3.2(solid-js@1.9.3)
-      '@solid-primitives/memo': 1.3.10(solid-js@1.9.3)
-      solid-js: 1.9.3
-      solid-transition-size: 0.1.4(solid-js@1.9.3)
-
-  '@corvu/utils@0.3.2(solid-js@1.9.3)':
-    dependencies:
-      '@floating-ui/dom': 1.6.12
-      solid-js: 1.9.3
-
   '@corvu/utils@0.4.2(solid-js@1.9.3)':
     dependencies:
       '@floating-ui/dom': 1.6.12
@@ -7043,12 +6974,6 @@ snapshots:
       '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
       solid-js: 1.9.3
 
-  '@solid-primitives/memo@1.3.10(solid-js@1.9.3)':
-    dependencies:
-      '@solid-primitives/scheduled': 1.4.4(solid-js@1.9.3)
-      '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
-      solid-js: 1.9.3
-
   '@solid-primitives/props@3.1.11(solid-js@1.9.3)':
     dependencies:
       '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
@@ -7070,10 +6995,6 @@ snapshots:
   '@solid-primitives/rootless@1.4.5(solid-js@1.9.3)':
     dependencies:
       '@solid-primitives/utils': 6.2.3(solid-js@1.9.3)
-      solid-js: 1.9.3
-
-  '@solid-primitives/scheduled@1.4.4(solid-js@1.9.3)':
-    dependencies:
       solid-js: 1.9.3
 
   '@solid-primitives/static-store@0.0.8(solid-js@1.9.3)':
@@ -10089,16 +10010,6 @@ snapshots:
 
   smob@1.5.0: {}
 
-  solid-dismissible@0.1.1(solid-js@1.9.3):
-    dependencies:
-      '@corvu/utils': 0.4.2(solid-js@1.9.3)
-      solid-js: 1.9.3
-
-  solid-focus-trap@0.1.7(solid-js@1.9.3):
-    dependencies:
-      '@corvu/utils': 0.3.2(solid-js@1.9.3)
-      solid-js: 1.9.3
-
   solid-js@1.9.3:
     dependencies:
       csstype: 3.1.3
@@ -10123,11 +10034,6 @@ snapshots:
       solid-js: 1.9.3
     transitivePeerDependencies:
       - supports-color
-
-  solid-transition-size@0.1.4(solid-js@1.9.3):
-    dependencies:
-      '@corvu/utils': 0.3.2(solid-js@1.9.3)
-      solid-js: 1.9.3
 
   solid-use@0.9.0(solid-js@1.9.3):
     dependencies:
