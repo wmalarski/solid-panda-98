@@ -18,7 +18,7 @@
 				"useHookAtTopLevel": "error"
 			},
 			"performance": {
-				"noReExportAll": "error"
+				"noReExportAll": "off"
 			},
 			"style": {
 				"noNegationElse": "error",

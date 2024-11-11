@@ -2,7 +2,7 @@ import { type Assign, Dialog } from "@ark-ui/solid";
 import { type DialogVariantProps, dialog } from "@sp98/styled-system/recipes";
 import type { HTMLStyledProps } from "@sp98/styled-system/types";
 import type { ComponentProps } from "solid-js";
-import { createStyleContext } from "../../utils/create-style-context";
+import { createStyleContext } from "../utils/create-style-context";
 
 const { withRootProvider, withContext } = createStyleContext(dialog);
 
