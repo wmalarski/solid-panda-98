@@ -7,7 +7,7 @@ export const dialog = defineSlotRecipe({
 		"root",
 		"trigger",
 		"portal",
-		"overlay",
+		"backdrop",
 		"close",
 		"content",
 		"header",
@@ -16,7 +16,7 @@ export const dialog = defineSlotRecipe({
 		"description",
 	],
 	base: {
-		overlay: {
+		backdrop: {
 			position: "fixed",
 			inset: "0",
 			zIndex: 50,

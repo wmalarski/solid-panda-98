@@ -13,6 +13,7 @@ export default function Home() {
 				</a>{" "}
 				to learn how to build SolidStart apps.
 			</p>
+			<Button />
 			<Box>AA</Box>
 		</main>
 	);

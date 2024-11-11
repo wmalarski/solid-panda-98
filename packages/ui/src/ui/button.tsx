@@ -1,36 +1,36 @@
-import { button, type ButtonVariant } from "@sp98/styled-system/recipes";
-import type { ParentProps, ValidComponent } from "solid-js";
-import { splitProps } from "solid-js";
+import { styled } from "@sp98/styled-system/jsx";
+import type { Component, JSX } from "solid-js";
+import { Show, splitProps } from "solid-js";
+import {
+	Button as StyledButton,
+	type ButtonProps as StyledButtonProps,
+} from "./styled/button";
 
-import * as ButtonPrimitive from "@kobalte/core/button";
-import type { PolymorphicProps } from "@kobalte/core/polymorphic";
+interface ButtonLoadingProps {
+	loading?: boolean;
+	loadingText?: JSX.Element;
+}
 
-import { cn } from "../utils";
+export interface ButtonProps extends StyledButtonProps, ButtonLoadingProps {}
 
-type ButtonProps<T extends ValidComponent = "button"> =
-	ButtonPrimitive.ButtonRootProps<T> &
-		Partial<ButtonVariant> &
-		ParentProps<{ class?: string | undefined }>;
-
-const Button = <T extends ValidComponent = "button">(
-	props: PolymorphicProps<T, ButtonProps<T>>,
-) => {
-	const [local, others] = splitProps(props as ButtonProps, [
-		"variant",
-		"size",
-		"class",
+export const Button: Component<ButtonProps> = (props) => {
+	const [localProps, rest] = splitProps(props, [
+		"loading",
+		"disabled",
+		"loadingText",
+		"children",
 	]);
 
+	const trulyDisabled = () => localProps.loading || localProps.disabled;
+
 	return (
-		<ButtonPrimitive.Root
-			class={cn(
-				button({ variant: local.variant, size: local.size }),
-				local.class,
-			)}
-			{...others}
-		/>
+		<StyledButton disabled={trulyDisabled()} {...rest}>
+			<Show
+				when={localProps.loading && !localProps.loadingText}
+				fallback={localProps.loadingText || localProps.children}
+			>
+				<styled.span opacity={0}>{localProps.children}</styled.span>
+			</Show>
+		</StyledButton>
 	);
 };
-
-export { Button };
-export type { ButtonProps };
