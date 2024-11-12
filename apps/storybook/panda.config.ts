@@ -1,5 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import { sp98Preset } from "@sp98/preset";
+import { sp98Preset } from "@sp98/ui/preset";
 
 export default defineConfig({
 	presets: [sp98Preset],

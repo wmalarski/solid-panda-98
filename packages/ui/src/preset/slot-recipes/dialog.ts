@@ -8,12 +8,13 @@ export const dialog = defineSlotRecipe({
 		"trigger",
 		"portal",
 		"backdrop",
-		"close",
+		"closeTrigger",
 		"content",
 		"header",
 		"footer",
 		"title",
 		"description",
+		"positioner",
 	],
 	base: {
 		backdrop: {
@@ -33,7 +34,7 @@ export const dialog = defineSlotRecipe({
 				fadeOut: 0,
 			},
 		},
-		close: {
+		closeTrigger: {
 			position: "absolute",
 			right: "4",
 			top: "4",

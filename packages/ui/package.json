@@ -17,6 +17,14 @@
 			"require": "./dist/index/index.common.js",
 			"node": "./dist/index/index.common.js",
 			"types": "./src/index.tsx"
+		},
+		"./preset": {
+			"solid": "./dist/preset/index.jsx",
+			"import": "./dist/preset/index.module.js",
+			"browser": "./dist/preset/index.module.js",
+			"require": "./dist/preset/index.common.js",
+			"node": "./dist/preset/index.common.js",
+			"types": "./src/preset/index.ts"
 		}
 	},
 	"scripts": {
@@ -34,6 +42,8 @@
 	},
 	"devDependencies": {
 		"@pandacss/dev": "^0.47.1",
+		"@pandacss/preset-panda": "^0.47.1",
+		"@pandacss/types": "^0.47.1",
 		"@solidjs/testing-library": "0.8.10",
 		"@sp98/typescript-config": "workspace: *",
 		"@sp98/preset": "workspace: *",

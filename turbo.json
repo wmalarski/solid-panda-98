@@ -1,6 +1,9 @@
 {
 	"$schema": "https://turbo.build/schema.json",
 	"tasks": {
+		"prepare": {
+			"cache": false
+		},
 		"build": {
 			"outputs": ["dist/**", "storybook-static/**"],
 			"dependsOn": ["^build"]
