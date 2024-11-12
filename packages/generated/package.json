@@ -32,5 +32,8 @@
 			"types": "./types/index.d.ts"
 		},
 		"./styles.css": "./styles.css"
+	},
+	"dependencies": {
+		"solid-js": "^1.9.3"
 	}
 }

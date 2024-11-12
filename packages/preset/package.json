@@ -27,7 +27,7 @@
 		"@pandacss/types": "^0.47.1",
 		"@sp98/typescript-config": "workspace: *",
 		"@rollup/plugin-typescript": "^12.1.1",
-		"rollup": "4.24.4",
+		"rollup": "4.25.0",
 		"typescript": "^5.6.3"
 	},
 	"publishConfig": {
