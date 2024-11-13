@@ -4,7 +4,6 @@
 		"build": "turbo run build",
 		"dev": "turbo run dev",
 		"start": "turbo run start",
-		"prepare": "turbo run prepare",
 		"preview-storybook": "turbo run preview-storybook",
 		"test": "turbo run test",
 		"test:coverage": "turbo run test:coverage",

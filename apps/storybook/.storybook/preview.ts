@@ -1,4 +1,4 @@
-import "@sp98/ui/styles.css";
+import "../src/main.css";
 
 const preview = {
 	parameters: {

@@ -2,7 +2,7 @@ import { defineConfig } from "@pandacss/dev";
 import { sp98Preset } from "src/preset";
 
 export default defineConfig({
-	presets: [sp98Preset],
+	presets: ["@pandacss/dev/presets", sp98Preset],
 	preflight: true,
 	outExtension: "mjs",
 	include: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -10,10 +10,11 @@ export default defineConfig({
 	theme: { extend: {} },
 	outdir: "../generated",
 	importMap: {
-		css: "@sp98/ui/css",
-		recipes: "@sp98/ui/recipes",
-		patterns: "@sp98/ui/patterns",
-		jsx: "@sp98/ui/jsx",
+		css: "@sp98/styled-system/css",
+		recipes: "@sp98/styled-system/recipes",
+		patterns: "@sp98/styled-system/patterns",
+		jsx: "@sp98/styled-system/jsx",
 	},
 	jsxFramework: "solid",
+	syntax: "object-literal",
 });

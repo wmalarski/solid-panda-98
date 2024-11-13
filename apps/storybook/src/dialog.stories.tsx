@@ -1,12 +1,5 @@
-import {
-	Button,
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger,
-} from "@sp98/ui";
+import { Stack } from "@sp98/styled-system/jsx";
+import { Button, Dialog, IconButton, XIcon } from "@sp98/ui";
 
 const meta = {
 	component: Dialog,
@@ -17,34 +10,53 @@ export default meta;
 
 export const Primary = {
 	render: () => (
-		<Dialog>
-			<DialogTrigger as={Button} variant="outline">
-				Share
-			</DialogTrigger>
-			<DialogContent class="sm:max-w-md">
-				<DialogHeader>
-					<DialogTitle>Share link</DialogTitle>
-					<DialogDescription>
-						Anyone who has this link will be able to view this.
-					</DialogDescription>
-				</DialogHeader>
-				<div class="flex items-center space-x-2">
-					<div class="grid flex-1 gap-2">
-						<label for="link" class="sr-only">
-							Link
-						</label>
-						<input
-							id="link"
-							value="https://ui.shadcn.com/docs/installation"
-							readOnly
-						/>
-					</div>
-					<Button type="submit" size="sm" class="px-3">
-						<span class="sr-only">Copy</span>
-					</Button>
-				</div>
-			</DialogContent>
-		</Dialog>
+		<Dialog.Root>
+			<Dialog.Trigger
+				asChild={(triggerProps) => (
+					<Button {...triggerProps()}>Open Dialog</Button>
+				)}
+			/>
+			<Dialog.Backdrop />
+			<Dialog.Positioner>
+				<Dialog.Content>
+					<Stack gap="8" p="6">
+						<Stack gap="1">
+							<Dialog.Title>Dialog Title</Dialog.Title>
+							<Dialog.Description>Dialog Description</Dialog.Description>
+						</Stack>
+						<Stack gap="3" direction="row" width="full">
+							<Dialog.CloseTrigger
+								asChild={(closeTriggerProps) => (
+									<Button
+										{...closeTriggerProps()}
+										variant="outline"
+										width="full"
+									>
+										Cancel
+									</Button>
+								)}
+							/>
+							<Button width="full">Confirm</Button>
+						</Stack>
+					</Stack>
+					<Dialog.CloseTrigger
+						asChild={(closeTriggerProps) => (
+							<IconButton
+								{...closeTriggerProps()}
+								aria-label="Close Dialog"
+								variant="ghost"
+								size="sm"
+								position="absolute"
+								top="2"
+								right="2"
+							>
+								<XIcon />
+							</IconButton>
+						)}
+					/>
+				</Dialog.Content>
+			</Dialog.Positioner>
+		</Dialog.Root>
 	),
 	name: "Dialog",
 	args: {},
