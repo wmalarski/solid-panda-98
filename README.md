@@ -7,7 +7,7 @@ This Solid design system is powered by:
 - 💅 [Tailwind](https://tailwindcss.com/) — Styling solution
 - 👷 [Solid-UI](https://www.solid-ui.com/) — Reusable components 
 - 👷 [Kobalte](https://kobalte.dev) — Component library
-- 🛠 [Rollup.js](https://rollupjs.org/) — TypeScript bundler 
+- 🛠 [Tsup](https://rollupjs.org/) — TypeScript bundler 
 - 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
 
 As well as a few others tools:

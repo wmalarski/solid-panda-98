@@ -4,36 +4,45 @@
 	"license": "MIT",
 	"sideEffects": false,
 	"source": "src/index.tsx",
-	"main": "dist/index/index.common.js",
-	"module": "dist/index/index.module.js",
-	"types": "dist/index/index.d.ts",
-	"files": ["dist"],
+	"main": "./dist/index/index.js",
+	"module": "./dist/index/index.js",
+	"types": "./dist/index/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"browser": {},
+	"typesVersions": {
+		"*": {
+			"preset": [
+				"./dist/preset/index.d.ts"
+			]
+		}
+	},
+	"type": "module",
 	"exports": {
-		"./styles.css": "./dist/styles.css",
 		".": {
 			"solid": "./dist/index/index.jsx",
-			"import": "./dist/index/index.module.js",
-			"browser": "./dist/index/index.module.js",
-			"require": "./dist/index/index.common.js",
-			"node": "./dist/index/index.common.js",
-			"types": "./src/index.tsx"
+			"import": {
+				"types": "./dist/index/index.d.ts",
+				"default": "./dist/index/index.js"
+			}
 		},
 		"./preset": {
-			"solid": "./dist/preset/index.jsx",
-			"import": "./dist/preset/index.module.js",
-			"browser": "./dist/preset/index.module.js",
-			"require": "./dist/preset/index.common.js",
-			"node": "./dist/preset/index.common.js",
-			"types": "./src/preset/index.ts"
+			"import": {
+				"types": "./dist/preset/index.d.ts",
+				"default": "./dist/preset/index.js"
+			}
 		}
 	},
 	"scripts": {
 		"prepare": "pnpm panda codegen",
+		"cssgen": "pnpm panda cssgen -o dist/lib.css",
+		"build": "tsup",
+		"build-fast": "tsup --no-dts",
+		"dev": "pnpm build-fast --watch",
 		"ship": "pnpm panda ship -o dist/panda.buildinfo.json",
-		"build": "rollup --config rollup.config.mjs",
 		"postbuild": "pnpm ship",
 		"release": "pnpm panda prepare && pnpm build && pnpm ship && pnpm publish",
-		"dev": "rollup --config rollup.config.mjs --watch",
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest --watch",
@@ -49,12 +58,11 @@
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/user-event": "14.5.2",
 		"@vitest/coverage-v8": "^2.1.4",
-		"@rollup/plugin-typescript": "^12.1.1",
+		"esbuild": "^0.21.3",
+		"esbuild-plugin-solid": "^0.6.0",
 		"jsdom": "^25.0.1",
-		"rollup": "4.25.0",
-		"rollup-plugin-postcss": "4.0.2",
-		"rollup-plugin-visualizer": "5.12.0",
-		"rollup-preset-solid": "2.0.1",
+		"tsup": "^8.0.2",
+		"tsup-preset-solid": "^2.2.0",
 		"typescript": "^5.6.3",
 		"vite-plugin-solid": "2.10.2",
 		"vitest": "^2.1.4"
