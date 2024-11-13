@@ -1,5 +1,6 @@
 import { Title } from "@solidjs/meta";
 import { Box } from "@sp98/styled-system/jsx";
+import { Button } from "@sp98/ui";
 
 export default function Home() {
 	return (
@@ -13,7 +14,7 @@ export default function Home() {
 				</a>{" "}
 				to learn how to build SolidStart apps.
 			</p>
-			<Button />
+			<Button backgroundColor="yellow.400">Button</Button>
 			<Box>AA</Box>
 		</main>
 	);

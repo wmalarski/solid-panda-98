@@ -32,6 +32,7 @@ export const Primary = {
 	render: (props: ComponentProps<typeof Button>) => (
 		<Button
 			{...props}
+			backgroundColor="amber.600"
 			onClick={(): void => {
 				alert("Hello from Turborepo!");
 			}}
