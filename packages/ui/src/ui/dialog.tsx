@@ -11,7 +11,7 @@ export const DialogCloseXTrigger: Component<
 > = (props) => {
 	return (
 		<CloseTrigger
-			asChild={(props) => <IconButton variant="ghost" size="sm" {...props()} />}
+			asChild={(props) => <IconButton size="sm" {...props()} />}
 			position="absolute"
 			top="2"
 			right="2"

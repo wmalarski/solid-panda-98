@@ -27,11 +27,7 @@ export const Primary = {
 						<Stack gap="3" direction="row" width="full">
 							<Dialog.CloseTrigger
 								asChild={(closeTriggerProps) => (
-									<Button
-										{...closeTriggerProps()}
-										variant="outline"
-										width="full"
-									>
+									<Button {...closeTriggerProps()} width="full">
 										Cancel
 									</Button>
 								)}
@@ -44,7 +40,6 @@ export const Primary = {
 							<IconButton
 								{...closeTriggerProps()}
 								aria-label="Close Dialog"
-								variant="ghost"
 								size="sm"
 								position="absolute"
 								top="2"
