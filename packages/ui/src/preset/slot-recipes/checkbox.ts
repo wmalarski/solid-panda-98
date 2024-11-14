@@ -6,40 +6,45 @@ export const checkbox = defineSlotRecipe({
 	slots: ["root", "indicator", "label", "group", "control"],
 	base: {
 		root: {
-			h: "4",
-			w: "4",
-			flexShrink: "0",
-			rounded: "sm",
-			border: "primary",
-			cursor: "pointer",
-			focusRingOffsetColor: "background",
+			fontFamily: "sans-serif, Arial",
+			WebkitFontSmoothing: "none",
+			fontSize: "11px",
 
-			_focusVisible: {
-				outline: "2px solid transparent",
-				outlineOffset: "2px",
-				focusRingWidth: "2",
-				focusRingColor: "ring",
-				focusRingOffsetWidth: "2",
-			},
-
-			_disabled: {
-				cursor: "not-allowed",
-				opacity: "0.5",
-			},
-
-			'&[data-state="checked"]': {
-				bg: "primary",
-				color: "primary.foreground",
+			display: "inline-flex",
+			alignItems: "center",
+			_focus: {
+				outline: "1px dotted #000000",
 			},
 		},
 		indicator: {
-			display: "flex",
-			alignItems: "center",
-			justifyContent: "center",
-			color: "currentColor",
+			"& svg": {
+				width: "12px",
+				height: "12px",
+				strokeWidth: "4px",
+			},
 		},
-		label: {},
+		label: {
+			position: "relative",
+			marginLeft: "{spacing.checkbox-total-width}",
+		},
 		group: {},
-		control: {},
+		control: {
+			content: "''",
+			position: "absolute",
+			display: "inline-block",
+			width: "{spacing.checkbox-width}",
+			height: "{spacing.checkbox-width}",
+			background: "{colors.button-highlight}",
+			boxShadow: "{borders.border-field}",
+			marginRight: "{spacing.radio-label-spacing}",
+
+			_active: {
+				background: "{colors.surface}",
+			},
+
+			_disabled: {
+				background: "{colors.surface}",
+			},
+		},
 	},
 });
