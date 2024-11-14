@@ -17,7 +17,7 @@
 		"vinxi": "^0.4.3"
 	},
 	"devDependencies": {
-		"@pandacss/dev": "^0.47.1",
+		"@pandacss/dev": "^0.48.0",
 		"@sp98/typescript-config": "workspace: *"
 	},
 	"engines": {
