@@ -7,101 +7,57 @@ export const button = defineRecipe({
 		display: "inline-flex",
 		alignItems: "center",
 		justifyContent: "center",
-		rounded: "md",
-		textStyle: "sm",
-		fontWeight: "medium",
-		transition: "colors",
-		cursor: "pointer",
-		focusRingOffsetColor: "background",
-		gap: "2",
+		border: "none",
+		color: "transparent",
+		textShadow: "0 0 {colors.text-color}",
+		background: "{colors.surface}",
+		boxShadow: "{borders.border-raised-outer}, {borders.border-raised-inner}",
+		borderRadius: 0,
 
-		_focusVisible: {
-			outline: "2px solid transparent",
-			outlineOffset: "2px",
-			focusRingWidth: "2",
-			focusRingColor: "ring",
-			focusRingOffsetWidth: "2",
+		fontFamily: "sans-serif, Arial",
+		WebkitFontSmoothing: "none",
+		fontSize: "11px",
+
+		minWidth: "75px",
+		minHeight: "23px",
+		padding: "0 12px",
+
+		_active: {
+			boxShadow: "{borders.border-sunken-outer}, {borders.border-sunken-inner}",
+			textShadow: "1px 1px {colors.text-color}",
+		},
+
+		_hover: {
+			boxShadow: "{borders.border-sunken-outer}, {borders.border-sunken-inner}",
+		},
+
+		_focus: {
+			outline: "1px dotted #000000",
+			outlineOffset: "-4px",
+		},
+
+		_focusInner: {
+			border: 0,
 		},
 
 		_disabled: {
-			pointerEvents: "none",
-			opacity: "50%",
+			textShadow: "1px 1px 0 {colors.button-highlight}",
 		},
 	},
 	variants: {
 		variant: {
 			default: {
-				bg: "primary",
-				color: "primary.foreground",
+				boxShadow:
+					"{borders.default-button-border-raised-outer}, {borders.default-button-border-raised-inner}",
 
-				_hover: {
-					bga: "primary/90",
+				_active: {
+					boxShadow:
+						"{borders.default-button-border-sunken-outer}, {borders.default-button-border-sunken-inner}",
 				},
-			},
-			destructive: {
-				bg: "destructive",
-				color: "destructive.foreground",
-
-				_hover: {
-					bga: "destructive/90",
-				},
-			},
-			outline: {
-				border: "input",
-				bg: "background",
-
-				_hover: {
-					bg: "accent",
-					color: "accent.foreground",
-				},
-			},
-			secondary: {
-				bg: "secondary",
-				color: "secondary.foreground",
-
-				_hover: {
-					bga: "secondary/90",
-				},
-			},
-			ghost: {
-				_hover: {
-					bg: "accent",
-					color: "accent.foreground",
-				},
-			},
-			link: {
-				color: "primary",
-				textUnderlineOffset: "4px",
-
-				_hover: {
-					textDecoration: "underline",
-				},
-			},
-		},
-		size: {
-			default: {
-				h: "10",
-				px: "4",
-				py: "2",
-			},
-			sm: {
-				h: "9",
-				rounded: "md",
-				px: "3",
-			},
-			lg: {
-				h: "11",
-				rounded: "md",
-				px: "8",
-			},
-			icon: {
-				h: "10",
-				w: "10",
 			},
 		},
 	},
 	defaultVariants: {
 		variant: "default",
-		size: "default",
 	},
 });
