@@ -1,11 +1,5 @@
 import { type Assign, Field } from "@ark-ui/solid";
-import { styled } from "@sp98/styled-system/jsx";
-import {
-	type FieldVariantProps,
-	field,
-	input,
-	textarea,
-} from "@sp98/styled-system/recipes";
+import { type FieldVariantProps, field } from "@sp98/styled-system/recipes";
 import type { HTMLStyledProps } from "@sp98/styled-system/types";
 import type { ComponentProps } from "solid-js";
 import { createStyleContext } from "../utils/create-style-context";
@@ -40,11 +34,5 @@ export const Label = withContext<
 export const Select = withContext<
 	Assign<HTMLStyledProps<"select">, Field.SelectBaseProps>
 >(Field.Select, "select");
-
-export type InputProps = ComponentProps<typeof Input>;
-export const Input = styled(Field.Input, input);
-
-export type TextareaProps = ComponentProps<typeof Textarea>;
-export const Textarea = styled(Field.Textarea, textarea);
 
 export { FieldContext as Context } from "@ark-ui/solid";

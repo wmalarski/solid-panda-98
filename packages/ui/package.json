@@ -7,11 +7,15 @@
 	"main": "./dist/index/index.js",
 	"module": "./dist/index/index.js",
 	"types": "./dist/index/index.d.ts",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"browser": {},
 	"typesVersions": {
 		"*": {
-			"preset": ["./dist/preset/index.d.ts"]
+			"preset": [
+				"./dist/preset/index.d.ts"
+			]
 		}
 	},
 	"type": "module",
