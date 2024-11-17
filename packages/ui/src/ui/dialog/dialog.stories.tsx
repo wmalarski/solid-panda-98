@@ -1,5 +1,5 @@
 import { Stack } from "@sp98/styled-system/jsx";
-import { Button, Dialog, IconButton, XIcon } from "@sp98/ui";
+import { Button, Dialog, TitleBar, XIcon } from "@sp98/ui";
 
 const meta = {
 	component: Dialog,
@@ -19,36 +19,23 @@ export const Primary = {
 			<Dialog.Backdrop />
 			<Dialog.Positioner>
 				<Dialog.Content>
-					<Stack gap="8" p="6">
-						<Stack gap="1">
-							<Dialog.Title>Dialog Title</Dialog.Title>
-							<Dialog.Description>Dialog Description</Dialog.Description>
-						</Stack>
-						<Stack gap="3" direction="row" width="full">
-							<Dialog.CloseTrigger
-								asChild={(closeTriggerProps) => (
-									<Button {...closeTriggerProps()} width="full">
-										Cancel
-									</Button>
-								)}
-							/>
-							<Button width="full">Confirm</Button>
-						</Stack>
+					<TitleBar.Root>
+						<TitleBar.Container>
+							<TitleBar.Text>AA</TitleBar.Text>
+							<TitleBar.Controls>
+								<Dialog.CloseTrigger
+									asChild={(closeTriggerProps) => (
+										<TitleBar.Control {...closeTriggerProps()}>
+											<XIcon />
+										</TitleBar.Control>
+									)}
+								/>
+							</TitleBar.Controls>
+						</TitleBar.Container>
+					</TitleBar.Root>
+					<Stack gap="3" direction="row" width="full">
+						<Button width="full">Confirm</Button>
 					</Stack>
-					<Dialog.CloseTrigger
-						asChild={(closeTriggerProps) => (
-							<IconButton
-								{...closeTriggerProps()}
-								aria-label="Close Dialog"
-								size="sm"
-								position="absolute"
-								top="2"
-								right="2"
-							>
-								<XIcon />
-							</IconButton>
-						)}
-					/>
 				</Dialog.Content>
 			</Dialog.Positioner>
 		</Dialog.Root>
