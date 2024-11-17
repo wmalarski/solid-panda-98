@@ -4,7 +4,7 @@ import { Show, splitProps } from "solid-js";
 import {
 	Button as StyledButton,
 	type ButtonProps as StyledButtonProps,
-} from "./styled/button";
+} from "./button.styled";
 
 interface ButtonLoadingProps {
 	loading?: boolean;

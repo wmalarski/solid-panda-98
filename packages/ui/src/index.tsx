@@ -1,4 +1,4 @@
-export * from "./ui/button";
+export * from "./ui/button/button";
 export * from "./ui/checkbox";
 export * from "./ui/dialog";
 export * from "./ui/field";

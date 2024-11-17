@@ -6,7 +6,11 @@ function getAbsolutePath(value) {
 }
 
 const config: StorybookConfig = {
-	stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+	stories: [
+		"../src/**/*.mdx",
+		"../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+		"../../../packages/ui/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+	],
 	addons: [
 		getAbsolutePath("@storybook/addon-links"),
 		getAbsolutePath("@storybook/addon-essentials"),
