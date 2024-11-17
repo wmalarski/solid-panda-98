@@ -1,4 +1,4 @@
-import { ark } from "@ark-ui/solid";
+import { ark, type Assign } from "@ark-ui/solid";
 import {
 	titleBar,
 	type TitleBarVariantProps,
@@ -10,7 +10,8 @@ import { createStyleContext } from "../utils/create-style-context";
 const { withRootProvider, withContext } = createStyleContext(titleBar);
 
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withRootProvider<TitleBarVariantProps>("div");
+export const Root =
+	withRootProvider<Assign<HTMLStyledProps<"div">, TitleBarVariantProps>>("div");
 
 export const Text = withContext<HTMLStyledProps<"div">>("span", "text");
 export type TextProps = ComponentProps<typeof Root>;
