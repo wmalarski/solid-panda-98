@@ -18,6 +18,7 @@ export const titleBar = defineSlotRecipe({
 			color: "white",
 			letterSpacing: 0,
 			marginRight: "24px",
+			lineHeight: 0,
 		},
 		controls: {
 			display: "flex",
@@ -27,6 +28,13 @@ export const titleBar = defineSlotRecipe({
 			display: "block",
 			minWidth: "16px",
 			minHeight: "14px",
+
+			"& svg": {
+				width: "16px",
+				height: "16px",
+				strokeWidth: "3px",
+				padding: "2px",
+			},
 
 			_active: {
 				padding: 0,

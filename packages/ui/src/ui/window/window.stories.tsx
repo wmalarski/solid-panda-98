@@ -1,4 +1,4 @@
-import { TitleBar, Window } from "@sp98/ui";
+import { TitleBar, Window, XIcon } from "@sp98/ui";
 
 const meta = {
 	component: Window.Body,
@@ -15,7 +15,9 @@ export const Primary = {
 					<TitleBar.Container>
 						<TitleBar.Text>AA</TitleBar.Text>
 						<TitleBar.Controls>
-							<TitleBar.Control>A</TitleBar.Control>
+							<TitleBar.Control>
+								<XIcon />
+							</TitleBar.Control>
 						</TitleBar.Controls>
 					</TitleBar.Container>
 				</TitleBar.Root>

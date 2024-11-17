@@ -8,7 +8,6 @@ export const button = defineRecipe({
 		alignItems: "center",
 		justifyContent: "center",
 		border: "none",
-		color: "transparent",
 		textShadow: "0 0 {colors.text-color}",
 		background: "{colors.surface}",
 		boxShadow: "{borders.border-raised-outer}, {borders.border-raised-inner}",

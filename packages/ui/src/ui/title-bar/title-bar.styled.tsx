@@ -5,6 +5,7 @@ import {
 } from "@sp98/styled-system/recipes";
 import type { HTMLStyledProps } from "@sp98/styled-system/types";
 import type { ComponentProps } from "solid-js";
+import { IconButton, type IconButtonProps } from "../icon-button/icon-button";
 import { createStyleContext } from "../utils/create-style-context";
 import { ParentRoot } from "../utils/parent-root";
 
@@ -31,8 +32,8 @@ export const Controls = withContext<HTMLStyledProps<"nav">>(
 );
 export type ControlsProps = ComponentProps<typeof Root>;
 
-export const Control = withContext<HTMLStyledProps<"button">>(
-	ark.button,
-	"control",
-);
+export const Control = withContext<IconButtonProps>((props) => {
+	return <IconButton {...props} />;
+}, "control");
+
 export type ControlProps = ComponentProps<typeof Root>;
