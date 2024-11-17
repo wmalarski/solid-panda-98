@@ -1,15 +1,18 @@
 import { ark } from "@ark-ui/solid";
-import { window, type WindowVariantProps } from "@sp98/styled-system/recipes";
+import {
+	statusBar,
+	type StatusBarVariantProps,
+} from "@sp98/styled-system/recipes";
 import type { HTMLStyledProps } from "@sp98/styled-system/types";
 import type { ComponentProps, ParentProps } from "solid-js";
 import { createStyleContext } from "../utils/create-style-context";
 import { ParentRoot } from "../utils/parent-root";
 
-const { withRootProvider, withContext } = createStyleContext(window);
+const { withRootProvider, withContext } = createStyleContext(statusBar);
 
 export type RootProps = ComponentProps<typeof Root>;
 export const Root =
-	withRootProvider<ParentProps<WindowVariantProps>>(ParentRoot);
+	withRootProvider<ParentProps<StatusBarVariantProps>>(ParentRoot);
 
 export const Container = withContext<HTMLStyledProps<"div">>(
 	ark.div,
@@ -17,5 +20,5 @@ export const Container = withContext<HTMLStyledProps<"div">>(
 );
 export type ContainerProps = ComponentProps<typeof Container>;
 
-export const Body = withContext<HTMLStyledProps<"div">>(ark.div, "body");
-export type BodyProps = ComponentProps<typeof Body>;
+export const Field = withContext<HTMLStyledProps<"span">>(ark.span, "field");
+export type FieldProps = ComponentProps<typeof Field>;

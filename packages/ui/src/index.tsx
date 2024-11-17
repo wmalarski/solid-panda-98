@@ -5,6 +5,7 @@ export * from "./ui/field/field";
 export * from "./ui/icon-button/icon-button";
 export * from "./ui/icons/icons";
 export * from "./ui/input/input";
+export * from "./ui/status-bar/status-bar";
 export * from "./ui/textarea/textarea";
 export * from "./ui/title-bar/title-bar";
 export * from "./ui/window/window";
