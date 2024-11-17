@@ -3,9 +3,9 @@ import { defineSlotRecipe } from "@pandacss/dev";
 export const titleBar = defineSlotRecipe({
 	className: "title-bar",
 	description: "Styles for the Title Bar component",
-	slots: ["root", "text", "controls", "control"],
+	slots: ["container", "text", "controls", "control"],
 	base: {
-		root: {
+		container: {
 			background:
 				"linear-gradient(90deg, {colors.dialog-blue}, {colors.dialog-blue-light})",
 			padding: "3px 2px 3px 3px",
@@ -40,7 +40,7 @@ export const titleBar = defineSlotRecipe({
 	variants: {
 		inactive: {
 			true: {
-				root: {
+				container: {
 					background:
 						"linear-gradient(90deg, {colors.dialog-gray}, {colors.dialog-gray-light})",
 				},
