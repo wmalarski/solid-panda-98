@@ -1,4 +1,4 @@
-import { ark, type Assign, Dialog } from "@ark-ui/solid";
+import { ark } from "@ark-ui/solid";
 import {
 	titleBar,
 	type TitleBarVariantProps,
@@ -9,26 +9,17 @@ import { createStyleContext } from "../utils/create-style-context";
 
 const { withRootProvider, withContext } = createStyleContext(titleBar);
 
-export type RootProviderProps = ComponentProps<typeof RootProvider>;
-export const RootProvider = withRootProvider<
-	Assign<Dialog.RootProviderProps, TitleBarVariantProps>
->(Dialog.RootProvider);
-
 export type RootProps = ComponentProps<typeof Root>;
-export const Root = withRootProvider<
-	Assign<Dialog.RootProps, TitleBarVariantProps>
->(Dialog.Root);
+export const Root = withRootProvider<TitleBarVariantProps>("div");
 
-export const Backdrop = withContext<
-	Assign<HTMLStyledProps<"div">, Dialog.BackdropBaseProps>
->(Dialog.Backdrop, "text");
+export const Text = withContext<HTMLStyledProps<"div">>("span", "text");
+export type TextProps = ComponentProps<typeof Root>;
 
-export const CloseTrigger = withContext<HTMLStyledProps<"nav">>(
-	"nav",
-	"controls",
-);
+export const Controls = withContext<HTMLStyledProps<"nav">>("div", "controls");
+export type ControlsProps = ComponentProps<typeof Root>;
 
 export const Control = withContext<HTMLStyledProps<"button">>(
 	ark.button,
 	"control",
 );
+export type ControlProps = ComponentProps<typeof Root>;
