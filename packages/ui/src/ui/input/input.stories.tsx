@@ -1,4 +1,5 @@
-import { Field, Input } from "@sp98/ui";
+import { Field } from "@sp98/ui/field";
+import { Input } from "@sp98/ui/input";
 
 const meta = {
 	component: Input,

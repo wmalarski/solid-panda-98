@@ -1,5 +1,8 @@
 import { Stack } from "@sp98/styled-system/jsx";
-import { Button, Dialog, TitleBar, XIcon } from "@sp98/ui";
+import { Button } from "@sp98/ui/button";
+import { Dialog } from "@sp98/ui/dialog";
+import { XIcon } from "@sp98/ui/icons";
+import { TitleBar } from "@sp98/ui/title-bar";
 
 const meta = {
 	component: Dialog,

@@ -11,29 +11,6 @@
 		"dist"
 	],
 	"browser": {},
-	"typesVersions": {
-		"*": {
-			"preset": [
-				"./dist/preset/index.d.ts"
-			]
-		}
-	},
-	"type": "module",
-	"exports": {
-		".": {
-			"solid": "./dist/index/index.jsx",
-			"import": {
-				"types": "./dist/index/index.d.ts",
-				"default": "./dist/index/index.js"
-			}
-		},
-		"./preset": {
-			"import": {
-				"types": "./dist/preset/index.d.ts",
-				"default": "./dist/preset/index.js"
-			}
-		}
-	},
 	"scripts": {
 		"prepare": "pnpm panda codegen",
 		"cssgen": "pnpm panda cssgen -o dist/lib.css",
@@ -74,5 +51,138 @@
 	},
 	"publishConfig": {
 		"access": "public"
+	},
+	"typesVersions": {
+		"*": {
+			"button": [
+				"./dist/button/index.d.ts"
+			],
+			"checkbox": [
+				"./dist/checkbox/index.d.ts"
+			],
+			"dialog": [
+				"./dist/dialog/index.d.ts"
+			],
+			"field": [
+				"./dist/field/index.d.ts"
+			],
+			"icon-button": [
+				"./dist/icon-button/index.d.ts"
+			],
+			"icons": [
+				"./dist/icons/index.d.ts"
+			],
+			"input": [
+				"./dist/input/index.d.ts"
+			],
+			"preset": [
+				"./dist/preset/index.d.ts"
+			],
+			"status-bar": [
+				"./dist/status-bar/index.d.ts"
+			],
+			"textarea": [
+				"./dist/textarea/index.d.ts"
+			],
+			"title-bar": [
+				"./dist/title-bar/index.d.ts"
+			],
+			"window": [
+				"./dist/window/index.d.ts"
+			]
+		}
+	},
+	"type": "module",
+	"exports": {
+		".": {
+			"solid": "./dist/index/index.jsx",
+			"import": {
+				"types": "./dist/index/index.d.ts",
+				"default": "./dist/index/index.js"
+			}
+		},
+		"./button": {
+			"solid": "./dist/button/index.jsx",
+			"import": {
+				"types": "./dist/button/index.d.ts",
+				"default": "./dist/button/index.js"
+			}
+		},
+		"./checkbox": {
+			"solid": "./dist/checkbox/index.jsx",
+			"import": {
+				"types": "./dist/checkbox/index.d.ts",
+				"default": "./dist/checkbox/index.js"
+			}
+		},
+		"./dialog": {
+			"solid": "./dist/dialog/index.jsx",
+			"import": {
+				"types": "./dist/dialog/index.d.ts",
+				"default": "./dist/dialog/index.js"
+			}
+		},
+		"./field": {
+			"solid": "./dist/field/index.jsx",
+			"import": {
+				"types": "./dist/field/index.d.ts",
+				"default": "./dist/field/index.js"
+			}
+		},
+		"./icon-button": {
+			"solid": "./dist/icon-button/index.jsx",
+			"import": {
+				"types": "./dist/icon-button/index.d.ts",
+				"default": "./dist/icon-button/index.js"
+			}
+		},
+		"./icons": {
+			"solid": "./dist/icons/index.jsx",
+			"import": {
+				"types": "./dist/icons/index.d.ts",
+				"default": "./dist/icons/index.js"
+			}
+		},
+		"./input": {
+			"solid": "./dist/input/index.jsx",
+			"import": {
+				"types": "./dist/input/index.d.ts",
+				"default": "./dist/input/index.js"
+			}
+		},
+		"./preset": {
+			"import": {
+				"types": "./dist/preset/index.d.ts",
+				"default": "./dist/preset/index.js"
+			}
+		},
+		"./status-bar": {
+			"solid": "./dist/status-bar/index.jsx",
+			"import": {
+				"types": "./dist/status-bar/index.d.ts",
+				"default": "./dist/status-bar/index.js"
+			}
+		},
+		"./textarea": {
+			"solid": "./dist/textarea/index.jsx",
+			"import": {
+				"types": "./dist/textarea/index.d.ts",
+				"default": "./dist/textarea/index.js"
+			}
+		},
+		"./title-bar": {
+			"solid": "./dist/title-bar/index.jsx",
+			"import": {
+				"types": "./dist/title-bar/index.d.ts",
+				"default": "./dist/title-bar/index.js"
+			}
+		},
+		"./window": {
+			"solid": "./dist/window/index.jsx",
+			"import": {
+				"types": "./dist/window/index.d.ts",
+				"default": "./dist/window/index.js"
+			}
+		}
 	}
 }

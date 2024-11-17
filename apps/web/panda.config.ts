@@ -20,6 +20,8 @@ export default defineConfig({
 	theme: { extend: {} },
 	jsxFramework: "solid",
 
+	minify: true,
+
 	// The output directory for your css system
 	outdir: "../../packages/generated",
 	importMap: {

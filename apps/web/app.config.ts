@@ -1,7 +1,16 @@
 import { defineConfig } from "@solidjs/start/config";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
+	ssr: false,
 	vite: {
-		plugins: [],
+		plugins: [
+			visualizer({
+				open: true,
+				gzipSize: true,
+				brotliSize: true,
+				template: "treemap",
+			}),
+		],
 	},
 });

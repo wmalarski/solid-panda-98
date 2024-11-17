@@ -1,6 +1,20 @@
 import { defineConfig } from "tsup";
 import * as preset from "tsup-preset-solid";
 
+const components = [
+	"button",
+	"checkbox",
+	"dialog",
+	"field",
+	"icon-button",
+	"icons",
+	"input",
+	"status-bar",
+	"textarea",
+	"title-bar",
+	"window",
+];
+
 const preset_options: preset.PresetOptions = {
 	// array or single object
 	entries: [
@@ -11,6 +25,10 @@ const preset_options: preset.PresetOptions = {
 			// will generate a separate development entry
 			// dev_entry: true,
 		},
+		...components.map((component) => ({
+			name: component,
+			entry: `src/ui/${component}/${component}.tsx`,
+		})),
 		{
 			// entries with '.tsx' extension will have `solid` export condition generated
 			entry: "src/preset/index.ts",
