@@ -1,6 +1,6 @@
 import { Show, children } from "solid-js";
-import { CheckIcon, MinusIcon } from "./icons";
-import * as StyledCheckbox from "./styled/checkbox";
+import { CheckIcon, MinusIcon } from "../icons/icons";
+import * as StyledCheckbox from "./checkbox.styled";
 
 export interface CheckboxProps extends StyledCheckbox.RootProps {}
 

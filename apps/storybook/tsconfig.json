@@ -1,5 +1,14 @@
 {
 	"extends": "@sp98/typescript-config/solid-app.json",
-	"include": ["."],
+	"include": [
+		".",
+		"../../packages/ui/src/ui/dialog/dialog.stories.tsx",
+		"../../packages/ui/src/ui/checkbox/checkbox.stories.tsx",
+		"../../packages/ui/src/ui/window/window.stories.tsx",
+		"../../packages/ui/src/ui/title-bar/title-bar.stories.tsx",
+		"../../packages/ui/src/ui/textarea/textarea.stories.tsx",
+		"../../packages/ui/src/ui/field/select.stories.tsx",
+		"../../packages/ui/src/ui/input/input.stories.tsx"
+	],
 	"exclude": ["dist", "build", "node_modules"]
 }

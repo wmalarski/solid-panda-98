@@ -1,10 +1,10 @@
 import type { Component, ComponentProps } from "solid-js";
 
-import { IconButton } from "./icon-button";
-import { XIcon } from "./icons";
-import { CloseTrigger } from "./styled/dialog";
+import { IconButton } from "../icon-button/icon-button";
+import { XIcon } from "../icons/icons";
+import { CloseTrigger } from "./dialog.styled";
 
-export * as Dialog from "./styled/dialog";
+export * as Dialog from "./dialog.styled";
 
 export const DialogCloseXTrigger: Component<
 	ComponentProps<typeof CloseTrigger>
