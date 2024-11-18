@@ -1,4 +1,4 @@
-import { TitleBar } from "@sp98/ui/title-bar";
+import { TitleBar } from "@sp98/ui";
 
 const meta = {
 	component: TitleBar.Root,

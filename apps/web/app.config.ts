@@ -5,5 +5,10 @@ export default defineConfig({
 	ssr: false,
 	vite: {
 		plugins: [visualizer({ open: true })],
+		build: {
+			rollupOptions: {
+				treeshake: true,
+			},
+		},
 	},
 });

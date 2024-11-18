@@ -20,7 +20,6 @@ export const Button: Component<ButtonProps> = (props) => {
 		"loadingText",
 		"children",
 	]);
-
 	const trulyDisabled = () => localProps.loading || localProps.disabled;
 
 	return (

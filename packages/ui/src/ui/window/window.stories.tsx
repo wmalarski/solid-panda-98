@@ -1,6 +1,4 @@
-import { XIcon } from "@sp98/ui/icons";
-import { TitleBar } from "@sp98/ui/title-bar";
-import { Window } from "@sp98/ui/window";
+import { TitleBar, Window, XIcon } from "@sp98/ui";
 
 const meta = {
 	component: Window.Body,

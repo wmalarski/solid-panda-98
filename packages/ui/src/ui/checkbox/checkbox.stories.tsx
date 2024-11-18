@@ -1,4 +1,4 @@
-import { Checkbox } from "@sp98/ui/checkbox";
+import { Checkbox } from "@sp98/ui";
 import type { ComponentProps } from "solid-js";
 
 const meta = {

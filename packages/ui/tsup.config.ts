@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 import * as preset from "tsup-preset-solid";
 
-const components = [
+const components: string[] = [
 	"button",
 	"checkbox",
 	"dialog",
@@ -43,6 +43,7 @@ const preset_options: preset.PresetOptions = {
 	// cjs: true,
 	modify_esbuild_options: (options) => {
 		const styled = "@sp98/styled-system";
+		// options.bundle = false;
 		options.external = options.external
 			? [...options.external, styled]
 			: [styled];

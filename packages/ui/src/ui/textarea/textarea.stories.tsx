@@ -1,5 +1,4 @@
-import { Field } from "@sp98/ui/field";
-import { Textarea } from "@sp98/ui/textarea";
+import { Field, Textarea } from "@sp98/ui";
 
 const meta = {
 	component: Textarea,

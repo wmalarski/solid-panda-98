@@ -1,4 +1,4 @@
-import { Field } from "@sp98/ui/field";
+import { Field } from "@sp98/ui";
 
 const meta = {
 	component: Field.Select,
